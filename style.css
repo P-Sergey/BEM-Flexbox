@@ -32,6 +32,7 @@
   display: flex;
   justify-content: space-between;
   height: 50px;
+  position: relative;
 }
 
 .logo_box {
@@ -49,6 +50,27 @@
   position: relative;
   right: 25px;
   top: 5px;
+}
+
+@keyframes bouncing{
+  0%  { bottom: 0;}
+  100% { bottom: 5px;}
+}
+  
+.fadeInLeft { 
+  animation: fadeInLeft 0.9s cubic-bezier(0.1,0.25,0.1,1) 0s /* infinite alternate */ /* both */; 
+}
+
+.jump {
+  animation: bouncing 0.9s cubic-bezier(0.1,0.25,0.1,1) 0s  infinite alternate both; 
+}
+
+.fadeInDown {
+  animation: fadeInDown 0.9s cubic-bezier(0.1,0.25,0.1,1) 0s /* infinite alternate */ /* both */; 
+}
+
+.pulse {
+  animation: pulse 0.9s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both; 
 }
 
 .search {
@@ -80,14 +102,9 @@
   width: 100%;
   height: 50px;
   position: relative;
-  /* top: 94px; */
   display: flex;
   justify-content: space-between; 
 }
-
-/* .navigation {    
-   
-} */
 
 .link_menu {
   color: black;
@@ -97,17 +114,6 @@
   width: -webkit-fill-available;
   padding: 15px 0;
 }
-
-/* .link_contact {
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;  
-  width: 106px;
-  padding: 15px 0;
-  position: relative;
-  left: 5px;
-} */
 
 .link_menu.active {
   background-color: #FFC740;
@@ -119,13 +125,8 @@
   color: black;
 }
 
-.img_frame {
-  max-width: 100%;
-  height: auto;
-  position: relative;
-}
-
 .banner {
+  display: flex;
   position: relative;
   width: 100%;
   height: 100%;
@@ -202,9 +203,7 @@
   height: 180px;
   display: flex;
   justify-content: space-between;
-  /* position: absolute;
-  top: 935px;
-  left: 159px; */
+  position: relative;
 }
 
 .bottom_block {
@@ -322,19 +321,19 @@
 }
 
 .clents_block {
-  width: 100%;
   height: 131px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-top: 20px;
+  margin: 30px 10px 10px 10px;
 }
 
 .clents {
   height: 131px;
   display: flex;
   align-items: center;  
-  justify-content: space-around;  
+  justify-content: space-around; 
+  margin: 0 30px; 
 }
 
 .clents_img_html {
